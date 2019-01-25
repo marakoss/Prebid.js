@@ -1183,3 +1183,30 @@ export function convertTypes(types, params) {
   });
   return params;
 }
+
+/**
+ * Creates an array of n length and fills each item with the given value
+ */
+export function fill(value, length) {
+  let newArray = [];
+
+  for (let i = 0; i < length; i++) {
+    newArray.push(value);
+  }
+
+  return newArray;
+}
+
+/**
+ *
+ */
+export function getAdPodPlacementNumber(videoParams) {
+  return videoParams.adPodDuration / Math.min(...videoParams.durationRange);
+}
+
+/**
+ *
+ */
+export function getAdPodMaxDuration(videoParams) {
+  return Math.max(...videoParams.durationRange);
+}
